@@ -10,15 +10,11 @@ namespace Assignment_2.Models
     {
         public static class CustomWindow
         {
-            public static MvcHtmlString BootstrapModalWindow(this HtmlHelper htmlHelper,)
+            public static IHtmlString BootstrapModalWindow(this HtmlHelper htmlHelper)
             {
-                 @"<button type = "button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
-
-                
+                 var htmlmodal= @"<button type = "button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
                 <div id = "myModal" class="modal fade" role="dialog">
                   <div class="modal-dialog">
-
-                    
                     <div class="modal-content">
                       <div class="modal-header">
                         <button type = "button" class="close" data-dismiss="modal">&times;</button>
@@ -33,8 +29,8 @@ namespace Assignment_2.Models
                     </div>
 
                   </div>
-                </div>"
+                </div>";
+                return MvcHtmlString
             }
         }
     }
-}
